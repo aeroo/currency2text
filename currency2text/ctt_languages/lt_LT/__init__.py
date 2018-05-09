@@ -36,7 +36,7 @@ class lt_LT(ctt_language):
                               u' milijardų']
         
         # next line is needed for correct loading of currencies 
-        import currencies
+        from . import currencies
         return currencies
 
 

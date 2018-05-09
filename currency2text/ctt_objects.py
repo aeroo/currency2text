@@ -189,5 +189,5 @@ def import_submodules(to_import, package, level=-1):
     m = __import__(package.__name__, globals(), locals(), names, level)
     return dict((name, getattr(m, name)) for name in names)
 
-import ctt_languages
+from . import ctt_languages
 import_submodules('language', ctt_languages, 0)

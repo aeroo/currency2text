@@ -28,7 +28,7 @@ class ru_RU(ctt_language):
         self.multi_plr_msc = [u'сoт', u' тысяч', u' миллионов', u' миллиардов']
         
         # next line is needed for correct loading of currencies 
-        import currencies
+        from . import currencies
         return currencies
 
 

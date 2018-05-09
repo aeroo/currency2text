@@ -26,7 +26,7 @@ class en_US(ctt_language):
                               u' billions']
         
         # next line is needed for correct loading of currencies 
-        import currencies
+        from . import currencies
         return currencies
 
 

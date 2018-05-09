@@ -30,7 +30,7 @@ class uk_UA(ctt_language):
         self.multi_plr_msc = [u'сoт', u' тисяч', u' мiллiонiв', u' мiллiардов']
         
         # next line is needed for correct loading of currencies 
-        import currencies
+        from . import currencies
         return currencies
 
 
@@ -78,14 +78,14 @@ class uk_UA(ctt_language):
             if digit2 == '1':
                 words += spacer + self.number_teens[int(digit3)]
             else:
-		        if int(digit2) > 1 and int(digit2) < 4:
-		            words += spacer + self.number_plr_msc[int(digit2)] + u'дцять'
-		        elif digit2 == '4':
-		            words += spacer + u'сорок'
-		        elif int(digit2) >= 5 and int(digit2) != 9:
-		            words += spacer + self.number_plr_msc[int(digit2)] + u'десят'
-		        elif digit2 == '9':
-		            words += spacer + u'дев\'яносто'
+                if int(digit2) > 1 and int(digit2) < 4:
+                    words += spacer + self.number_plr_msc[int(digit2)] + u'дцять'
+                elif digit2 == '4':
+                    words += spacer + u'сорок'
+                elif int(digit2) >= 5 and int(digit2) != 9:
+                    words += spacer + self.number_plr_msc[int(digit2)] + u'десят'
+                elif digit2 == '9':
+                    words += spacer + u'дев\'яносто'
 
         # processing ones
         if chunklength > 0 and digit2 != '1' :
