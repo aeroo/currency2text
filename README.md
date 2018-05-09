@@ -25,26 +25,30 @@ EUR, USD, TRY, MXN, LVL, LTL, UAH, RUB
 
 Installation
 =========
+from local folder:
 #> sudo ./setup.py install
+
+directly from github:
+#> pip3 install git+https://github.com/aeroo/currency2text.git
 
 Usage
 =========
 from currency2text import currency_to_text, supported_language
-print currency_to_text(23.45, 'EUR', 'lv_LV')
+print(currency_to_text(23.45, 'EUR', 'lv_LV'))
 > divdesmit trīs eiro četrdesmit pieci centi
 
-print currency_to_text(23.45, 'EUR', 'en_US')
+print(currency_to_text(23.45, 'EUR', 'en_US'))
 > twenty three euro fourty five cents
 
-print supported_language
+print(supported_language)
 > {'uk_UA': uk_UA, 'ru_RU': ru_RU, 'lt_LT': lt_LT, 'en_US': en_US,
 'lv_LV': lv_LV, 'de_DE': de_DE, 'es_ES': es_ES, 'tr_TR': tr_TR}
 
 suppl = supported_language[language_code]
-print suppl.currency_to_text(23.45, 'USD')
+print(suppl.currency_to_text(23.45, 'USD'))
 > twenty three US dollars fourty five cents
 
-print supported_language.get('en_US').supported_currency
+print(supported_language.get('en_US').supported_currency)
 > {u'TRY': TRY, u'MXN': MXN, u'USD': USD, u'LVL': LVL, u'EUR': EUR, u'LTL': LTL}
 
 Module Structure
