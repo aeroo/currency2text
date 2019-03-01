@@ -88,7 +88,7 @@ class ctt_language(object):
             return self.wordify('0', 0, gender)
         elif sum_integers > 0:
             lengthx = len(str(sum_integers))
-            nrchunks = (lengthx / 3)
+            nrchunks = (lengthx % 3)
         if nrchunks < (float(lengthx) / 3) :
             nrchunks+=1
         inc = 1
