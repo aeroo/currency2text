@@ -18,7 +18,7 @@ class es_ES(ctt_language):
                                u'cinco', u'seis', u'siete', u'ocho', u'nueve']
 
         # tens - masculine, singular
-        self.tens_sng_msc = [u'', u'', u'veint', u'treinta', u'cuarenta',
+        self.tens_sng_msc = [u'', u'', u'veinte', u'treinta', u'cuarenta',
                              u'cincuenta', u'sesenta', u'setenta', u'ochenta',
                              u'noventa ']
         
@@ -65,8 +65,10 @@ class es_ES(ctt_language):
             return number[0]
         # processing hundreds
         if chunklength == 3 :
-            if digit1 == '1' :
+            if digit1 == '1' and digit2 == '0' and digit3 == '0':
                 words += self.multi_sng_msc[0]
+            elif digit1 == '1' and (digit2 != 0 or digit3 != '0'):
+                words += self.multi_sng_msc[0] + 'to'
             else :
                 if int(digit1) >= 1 : words += self.digits_sng_msc[int(digit1)]\
                                                          + self.multi_plr_msc[0]
