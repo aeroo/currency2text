@@ -69,6 +69,8 @@ class es_ES(ctt_language):
                 words += self.multi_sng_msc[0]
             elif digit1 == '1' and (digit2 != 0 or digit3 != '0'):
                 words += self.multi_sng_msc[0] + 'to'
+            elif digit1 == '5':
+                words += 'quinientos'
             else :
                 if int(digit1) >= 1 : words += self.digits_sng_msc[int(digit1)]\
                                                          + self.multi_plr_msc[0]

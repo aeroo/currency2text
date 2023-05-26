@@ -10,8 +10,8 @@ class eur(ctt_currency):
         self.fractions = 100
         self.cur_singular = u' euro'
         self.cur_plural = u' euros'
-        self.frc_singular = u' centavo'
-        self.frc_plural = u' centavos'
+        self.frc_singular = u' centimo'
+        self.frc_plural = u' centimos'
         # grammatical genders: f - feminine, m - masculine, n -neuter
         self.cur_gram_gender = 'm'
         self.frc_gram_gender = 'm'
