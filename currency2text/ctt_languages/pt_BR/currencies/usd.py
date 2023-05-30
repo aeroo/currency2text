@@ -5,7 +5,7 @@ from currency2text.ctt_objects import ctt_currency
 
 class usd(ctt_currency):
     def _init_currency(self):
-        self.language = u'es_ES'
+        self.language = u'pt_BR'
         self.code = u'USD'
         self.fractions = 100
         self.cur_singular = u' dólar'
