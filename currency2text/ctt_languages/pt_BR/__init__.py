@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf8 -*-
 # pt_BR
+################################################################################
 # Portuguese language support assembled from contributions provided by:
 #       * samuelpx - https://github.com/samuelpx [samuelxpp@gmail.com] 
 ################################################################################
