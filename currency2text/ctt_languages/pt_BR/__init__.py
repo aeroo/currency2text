@@ -1,37 +1,36 @@
 #!/usr/bin/python
 # -*- coding: utf8 -*-
-# es_ES
+# pt_BR
 ################################################################################
-# Spanish language support assembled from contributions provided by:
-#       * mechiscogo
-#       * Christopher Ormaza - Ecuadorenlinea.net <chris.ormaza@gmail.com>, 2011
+# Portuguese language support assembled from contributions provided by:
+#       * samuelpx - https://github.com/samuelpx [samuelxpp@gmail.com] 
 ################################################################################
 
 from currency2text.ctt_objects import ctt_language
 
-class es_ES(ctt_language):
+class pt_BR(ctt_language):
     def _init_lang(self):
         # language name
-        self.name = 'es_ES'
+        self.name = 'pt_BR'
         # digits - masculine, singular
-        self.digits_sng_msc = [u'cero', u'uno', u'dos', u'tres', u'cuatro',
-                               u'cinco', u'seis', u'siete', u'ocho', u'nueve']
+        self.digits_sng_msc = [u'zero', u'um', u'dois', u'três', u'quatro',
+                               u'cinco', u'seis', u'sete', u'oito', u'nove']
 
         # tens - masculine, singular
-        self.tens_sng_msc = [u'', u'', u'veinte', u'treinta', u'cuarenta',
-                             u'cincuenta', u'sesenta', u'setenta', u'ochenta',
-                             u'noventa ']
+        self.tens_sng_msc = [u'', u'', u'vinte', u'trinta', u'quarenta',
+                             u'cinquenta', u'sessenta', u'setenta', u'oitenta',
+                             u'noventa']
         
         # teens - masculine
-        self.teens = [u'diez', u'once', u'doce', u'trece', u'catorce',
-                      u'quince', u'dieciséis', u'diecisiete', u'dieciocho',
-                      u'diecinueve']
+        self.teens = [u'dez', u'onze', u'doze', u'treze', u'quatorze',
+                      u'quinze', u'dezesseis', u'dezessete', u'dezoito',
+                      u'dezenove']
 
         # multiplier - masculine, singular
-        self.multi_sng_msc = [u'cien', u' mil', u' millón', u' billón']
+        self.multi_sng_msc = [u'cem', u' mil', u' milhão', u' bilhão']
 
         # multiplier - masculine, plural
-        self.multi_plr_msc = [u'cientos', u' mil', u' millones', u' billones']
+        self.multi_plr_msc = [u'cento', u' mil', u' milhões', u' bilhões']
         
         # next line is needed for correct loading of currencies 
         from . import currencies
@@ -67,10 +66,6 @@ class es_ES(ctt_language):
         if chunklength == 3 :
             if digit1 == '1' and digit2 == '0' and digit3 == '0':
                 words += self.multi_sng_msc[0]
-            elif digit1 == '1' and (digit2 != 0 or digit3 != '0'):
-                words += self.multi_sng_msc[0] + 'to'
-            elif digit1 == '5':
-                words += 'quinientos'
             else :
                 if int(digit1) >= 1 : words += self.digits_sng_msc[int(digit1)]\
                                                          + self.multi_plr_msc[0]
@@ -103,4 +98,4 @@ class es_ES(ctt_language):
         else:
             return ''
 
-es_ES()
+pt_BR()
